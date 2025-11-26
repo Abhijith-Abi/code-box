@@ -5,6 +5,7 @@ export default function Home() {
         <>
             <div>
                 <h1 className="font-game-font text-2xl">Hello</h1>
+                {/* // it should use the Inter font for this button */}
                 <Button>Click Me</Button>
             </div>
         </>
