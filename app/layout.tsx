@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Pixelify_Sans, Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const gameFont = Pixelify_Sans({
     variable: "--font-game-font",
@@ -23,11 +24,18 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning className="dark">
             <body
                 className={`${gameFont.variable} ${inter.variable} antialiased`}
             >
-                {children}
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="dark"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );
