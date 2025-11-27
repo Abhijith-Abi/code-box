@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Pixelify_Sans, Inter } from "next/font/google";
+import { Pixelify_Sans, Inter, Jersey_10 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const gameFont = Pixelify_Sans({
+const gameFont = Jersey_10({
     variable: "--font-game-font",
     subsets: ["latin"],
+    weight: ["400"],
 });
 
 const inter = Inter({
@@ -24,9 +25,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" suppressHydrationWarning className="dark">
+        <html lang="en" className="dark">
             <body
                 className={`${gameFont.variable} ${inter.variable} antialiased`}
+                suppressHydrationWarning
             >
                 <ThemeProvider
                     attribute="class"
