@@ -1,13 +1,12 @@
 import { Button } from "@/components/ui/button";
+import Header from "./_components/Header";
+import Hero from "./_components/Hero";
 
 export default function Home() {
     return (
-        <>
-            <div>
-                <h1 className="font-game-font text-2xl">Hello</h1>
-                {/* // it should use the Inter font for this button */}
-                <Button>Click Me</Button>
-            </div>
-        </>
+        <div className="flex flex-col items-center">
+            <Header />
+            <Hero />
+        </div>
     );
 }
