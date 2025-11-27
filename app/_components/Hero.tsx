@@ -11,6 +11,7 @@ function Hero() {
                 width={1000}
                 height={1000}
                 className="w-full h-full object-cover absolute inset-0"
+                unoptimized
             />
             <div className="absolute w-full flex flex-col items-center mt-24">
                 <h2 className="font-bold text-7xl font-game-font">
